@@ -9,7 +9,6 @@ import {
   FormControlLabel,
   FormHelperText,
   Grid,
-  Link,
   TextField,
   Typography,
 } from '@mui/material';
@@ -23,6 +22,7 @@ import {
 } from 'react-hook-form';
 import { IAuthFormFields } from 'types/types';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 interface AuthenticationProps {
   isSignIn: boolean;
@@ -126,9 +126,13 @@ const Authentication = ({
           <Grid container justifyContent={'end'}>
             <Grid item onClick={handleResetForm}>
               {isSignIn ? (
-                <Link href={LINKS.signUp}>{t('dontHaveAccount')}</Link>
+                <Link to={LINKS.signUp} style={{ color: 'inherit', textDecoration: 'none' }}>
+                  {t('dontHaveAccount')}
+                </Link>
               ) : (
-                <Link href={LINKS.signIn}>{t('haveAccount')}</Link>
+                <Link to={LINKS.signIn} style={{ color: 'inherit', textDecoration: 'none' }}>
+                  {t('haveAccount')}
+                </Link>
               )}
             </Grid>
           </Grid>
