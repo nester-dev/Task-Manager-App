@@ -24,3 +24,4 @@ export const ALL_STATUSES = 'All';
 export const ALL_TRANSLATIONS = ['All', 'Все'];
 
 export const theBestDevelopersEver = ['Sasha', 'Dima', 'Olya', 'Aleh'];
+const TEST = "TEST";
